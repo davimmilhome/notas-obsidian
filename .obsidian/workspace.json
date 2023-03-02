@@ -1,0 +1,187 @@
+{
+  "main": {
+    "id": "e5f2d038736cc4c7",
+    "type": "split",
+    "children": [
+      {
+        "id": "b4cc728be995ba47",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a56f11e1bce22afb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "S1/sistemas_operacionais/notas/CAP 1 - VISÃO GERAL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "25f20fa7e3c84ebd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "S1/etica_digital/ÉTICA DIGITAL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d7b19ee415571496",
+    "type": "split",
+    "children": [
+      {
+        "id": "7f551035b26e3765",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e92cd79db1eb7102",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "054ca4b4f6de8395",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ff3966d41514eafb",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "b3e1fc06b480d6ed",
+    "type": "split",
+    "children": [
+      {
+        "id": "f9ddaa667461fc8f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7dd50f4d0c68ada5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "S1/etica_digital/ÉTICA DIGITAL.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c6e3037341993e1a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "S1/etica_digital/ÉTICA DIGITAL.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f34f1f22cfa9f39c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "fd0369b448f40491",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "S1/etica_digital/ÉTICA DIGITAL.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "e92cd79db1eb7102",
+  "lastOpenFiles": [
+    "S1/etica_digital/etica-no-mundo-digital.pdf",
+    "S1/etica_digital/Não confirmado 677592.crdownload",
+    "S1/etica_digital/notas",
+    "S1/sistemas_operacionais/notas/CAP 1 - VISÃO GERAL.md",
+    "S1/etica_digital/ÉTICA DIGITAL.md",
+    "S1/etica_digital",
+    "2023-02-26.md",
+    "S1/sistemas_operacionais/notas/CAP 2 -.md",
+    "CIÊNCIAS DA COMPUTAÇÃO.md",
+    "S1/sistemas_operacionais/notas/SISTEMAS OPERACIONAIS.md",
+    "README.md",
+    "S1/sistemas_operacionais/notas/EXERCÍCIOS.md",
+    "Sem título.canvas",
+    "Ementas/2023-1-3-124539.pdf",
+    "Ementas/mat-discreta-formulario-criacao.pdf",
+    "Ementas/historico_413521.pdf",
+    "Ementas/EF0467 A- Economia Matemática II.pdf",
+    "Ementas/EMENTA DA DISCIPLINA CB661 - matematica discreta.docx",
+    "Ementas/EH0287 MATEMÁTICA FINANCEIRA.pdf",
+    "Ementas/EF0419 - Estatística Econômica II.pdf",
+    "Pasted image 20230225111400.png",
+    "S1/Sem título.md"
+  ]
+}
