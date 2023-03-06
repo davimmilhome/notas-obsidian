@@ -45,7 +45,7 @@ Como citado anteriormente, a aplicação do usuário interage diretamente com o 
 
 Os primeiros sistemas desenvolvidos eram voltados tipicamente para a execução de um único programa. As aplicações aguardavam o termino do programa corrente. Esses sistemas forçam com que o processador, memória e outros periféricos fiquem a serviço exclusivo da execução de um único programa.
 
-Observe que, os recursos do computador como a memória são sub-utilizados. Nesse sentido, os sistemas monoprogramáveis são mais simples de implementação pois não há necessidade de se preocupar com programas advindos do compartilhamento de recursos.
+Observe que, os recursos do computador como a memória são sub-utilizados. Nesse sentido, os sistemas monoprogramáveis são mais simples de implementação pois não há necessidade de se preocupar com problemas advindos do compartilhamento de recursos.
 
 ## Sistemas mutiprogramáveis/multitarefas
 
@@ -76,14 +76,14 @@ Nesse tipo de sistema, cada programa é executado em pequenas fatias de tempo do
  
 ### Sistemas de tempo real  (real-time)
 
-Ele é bem semelhante aos sistemas de time-sharing, entretanto, o tempo de execução de um JOB precisa estar bem definido. Ou seja, no caso de um sistema onde o método de processamento é o time-sharing, , o tempo de execução do programa pode variar, porém, no método de tempo real essa variação não pode ocorrer, pois poderia causar problemas irreparáveis durante a execução execução.
+Ele é bem semelhante aos sistemas de time-sharing, entretanto, o tempo de execução de um JOB precisa estar bem definido. Ou seja, no caso de um sistema onde o método de processamento é o time-sharing, o tempo de execução do programa pode variar, porém, no método de tempo real essa variação não pode ocorrer, pois poderia causar problemas irreparáveis durante a execução execução.
 
 Nesse caso, não existe a ideia de fatia de tempo. Um programa utiliza o tempo que for necessário a sua execução até que apareça outro mais prioritário. Geralmente, a prioridade da aplicação é definida por ela mesma ao invés do S.O.
 
 Esses sistemas normalmente são empregados em situações que o tempo de procesamento é um fator fundamental, por exemplo, tráfego aéreo, refinarias, usinas nucleares, etc.
 
 
-# Sistemas com múltiplos processadores
+## Sistemas com múltiplos processadores
 
 São sistemas onde duas ou mais UCPs trabalham em conjunto. A vantagem desse tipo de sistema é permitir que vários programas sejam executados ao mesmo tempo ou que um mesmo programa seja subdividido para ser executado em  diversos processadores. Geralmente esse tipo de sistema é utilizado para o procesamento científico.
 
@@ -102,7 +102,7 @@ Nesse tipo de sistema, pode haver um deterrminado programa que faça o balanceam
 
 Dentre os sistemas com múltiprocessadores, existem dois principais: fortemente acoplados e fracamente acomplados.
 
-## Fortemente acoplados
+### Fortemente acoplados
 
 Existe apenas uma memória principal sendo compartilhada por todos os processadores. A taxa de transferência entre processador e memória é muito maior que nos fracamente acoplados.
 
@@ -112,11 +112,11 @@ Nesse tipo de sistema, os dispositivos E/S são gerenciados por apenas um S.O. A
 Caracterizam pelo tempo de acesso a memória principal sendo uniforme.
 
  * NUMA  (NON-UNIFORM Memory Access):
-Carcterizam-se por poossuirem diversos conjutos de processadores reunídos a memória principal, sendo que cada conjunto é conectado aos outros através de uma rede  de interconexão. O tempo de acesso a memória pelos processadores varia em função de sua localidade física.
+Carcterizam-se por possuirem diversos conjutos de processadores reunídos a memória principal, sendo que cada conjunto é conectado aos outros através de uma rede  de interconexão. O tempo de acesso a memória pelos processadores varia em função de sua localidade física.
 
-## Fracamente acomplados
+### Fracamente acomplados
 
-Cada sistema computacional tem suas próprias memórias individualis além disso, a taxa de transferência entre processadores e a memória em sistemas pode variar em função da distância física dos processadores com relação memória.
+Cada sistema computacional tem suas próprias memórias individualis, além disso, a taxa de transferência entre processadores e a memória em sistemas pode variar em função da distância física dos processadores com relação memória.
 
 Nos sistemas fracamente acoplados, cada sistema funciona de forma independente, possuíndo seu próprio S.O. Em decorrência disso, os sistemas fracamente acoplados também são conhecidos como sistemas multipcomputadores.
 
