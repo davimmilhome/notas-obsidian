@@ -24,7 +24,7 @@
 
 	Existem os sistemas monoprogramáveis, nos quais somente é possível executar um programa por vez, ou seja, a execução de um determinado JOB toma para si todos os recursos da máquina.
 	Além disso, existemos sistemas multiprogramáveis que podem ser monousuários ou multiusuários. Esse tipo de sistema pode empregar uma ou mais estratégias de processamento, como o processamento BATCH, time-sharing e real-time.
-	Por fim, existem os sistemas muti-processadores,que podem ser fortemente acomplados ou fracamente acoplados.
+	Por fim, existem os sistemas muti-processadores,que podem ser fortemente acoplados ou fracamente acoplados.
 
 6° Por que dizemos que existe uma subutilização de recursos em sistemas monoprogramáveis?
 

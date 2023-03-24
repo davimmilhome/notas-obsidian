@@ -18,7 +18,7 @@ Usuário > Aplicações > S.O > Hardware
 
 Nos sistemas computacionais,  os usuários compartilham recursos, para isso é necessário configurar o uso concorrente desses recursos. Se imaginarmos uma impressora, deverá existir algum tipo de controle para que a impressão de um usuário não interfira nas demais impressões.
 
-Não somente um S.O deve gerenciar as operações concorrentes para mais de um usuário, mas também gerencia essas operações para diversas aplicações de um mesmo usuário.
+Não somente um S.O deve gerenciar as operações concorrentes para mais de um usuário, mas também gerenciar essas operações para diversas aplicações de um mesmo usuário.
 
 Da mesma maneira que as linguagens de programação, os sistemas operacionais evoluíram no sentido de facilitar o trabalho de codificação, submissão, execução e depuração de programas. Com esse fim, os sistemas operacionais incorporaram seu próprio conjunto de rotinas para as operações de entrada e saída (Input/Output Control System- IOCS).
 
@@ -90,7 +90,7 @@ São sistemas onde duas ou mais UCPs trabalham em conjunto. A vantagem desse tip
 Outras características importantes que esses sistemas proporcionam são a escalabilidade, disponibilidade e balanceamento de carga.
 
  - Escalabilidade
-Escalabilidade é a capacidade de aumenbtar o poder de processamento do sistema computacional apenas adicionando novos processadores, sem a necessidade de troca do sistema completo.
+Escalabilidade é a capacidade de aumentar o poder de processamento do sistema computacional apenas adicionando novos processadores, sem a necessidade de troca do sistema completo.
 
 * Disponiblidade
 Nesse caso,a diosponibilidade se caracteriza pela fácil substituição de uma unidade de processamento por outra, caso ocorra algum problema. Suponha que durante a execução de um determinado programa um processador entre em curto, a sua aplicação não será encerrada pois existem outras unidades em funcionamento.
