@@ -4,7 +4,7 @@ No contexto de programação, uma sub-rotina é um bloco de código que pode ser
 
 O tradutor é um programa que converte o código fonte de um programa escrito em uma linguagem de programação em código de máquina, que é o código que o computador pode executar diretamente. O resultado desse processo é um módulo-objeto, que contém o código de máquina gerado pelo tradutor.
 
-No entanto, mesmo com o módulo-objeto gerado, o programa pode não ser executável. Isso ocorre porque o programa pode chamar sub-rotinas externas que não foram definidas no próprio programa. Nessas situações, o linker entra em ação.
+No entanto, muitas vezes mesmo com o módulo-objeto gerado, o programa pode não ser executado. Isso ocorre porque o programa pode chamar sub-rotinas externas que não foram definidas no próprio programa. Nessas situações, o linker entra em ação.
 
 O linker é um utilitário que tem como função associar o programa principal às sub-rotinas externas que ele utiliza. Ele faz isso verificando as referências a essas sub-rotinas no código do programa e procurando a implementação dessas sub-rotinas em outros módulos-objeto ou bibliotecas de funções. Quando ele encontra essas implementações, ele as vincula ao módulo-objeto gerado pelo tradutor, produzindo um arquivo executável que pode ser executado diretamente pelo sistema operacional.
 

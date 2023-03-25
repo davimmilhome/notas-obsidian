@@ -3,11 +3,11 @@
 
 Um sistema computacional é um conjunto de circuitos eletrônicos interligados, formado por processadores, memórias, registradores, barramentos e dispositivos de entrada e saida (E/S). Todos esses dispositivos manipulam dados na forma digital, o que proporciona uma maneira confiável de representação e transmissão de dados.
 
-Em 1940 foi desenvolvida uma arquitetura de sistema computacional que é aplamente utilizada até hoje, a arquitetura de Von Neumann. Essa arquitetura é norteado pelo princípio do armazenamento de dados e programas na memória, esse fator implica que as instruções dos programas e os dados sejam manipulados da mesma forma, ou seja, pelos mesmos componentes de hardware. A arquitetura de Von Neumann é composta de cinco elementos principais:
+Em 1940 foi desenvolvida uma arquitetura de sistema computacional que é aplamente utilizada até hoje, a arquitetura de Von Neumann. Essa arquitetura é norteado pelo princípio do armazenamento de dados e programas na memória, esse fator implica que as instruções dos programas e os dados são manipulados da mesma forma, ou seja, pelos mesmos componentes de hardware. A arquitetura de Von Neumann é composta de cinco elementos principais:
 
 * Unidade Central de Processamento (CPU)
 
-Responsável por executar as instruções do programa e manipular os dados. Ele consiste em um conjunto de registradores, uma unidade de controle e uma unidade aritmética e lógica (ALU).
+Responsável por executar as instruções do programa e manipular os dados. Ele consiste em um conjunto de registradores, uma unidade de controle e uma unidade Aritmética e Lógica (ALU).
 
 * Memória 
 
@@ -84,7 +84,7 @@ A memória cache armazena uma pequena parte do conteúdo da memória principal. 
 
 Os dados são alocados na cache segundo o princípio da localidade, que é a tendência do processador, ao longo da execução de um programa, referenciar instruções da memória principal localizados em endereços próximos. Essa tedência é justificada pela alta incidência de sub-rotinas e acesso a estruturas de dados como vetores e tabelas. O princípio da localidade garante então que após a transferência de um novo bloco para a cache, haverá uma alta probabilidade de cache hits em futuras referências.
 
-Em algumas construções, há a hierarquização da construção de cache em múltiplos níveis.  O nível mais alto é chamado de L1 (Level 1), com baixa capacidade de armazenamento e altíssima velocidade, o segundo nível é chamado L2 e assim por diante.
+Em algumas construções, há a hierarquização da construção de cache em múltiplos níveis.  O nível mais alto é chamado de L1 (Level 1), com baixa capacidade de armazenamento e altíssima velocidade, o segundo nível é chamado L2, com capacidade de armazenamento um pouco maior e um pouco menos de velocidade, e assim por diante.
 
 ## Memória secundária
 
@@ -117,17 +117,17 @@ A principal vantagem nesse caso é reduzir o número de adaptadores existentes n
 
 # Pipelining
 
-Da mesma forma em que uma linha de montagem, a execução de uma instrução pode ser dividida em subtarefas, como as fases de busca da instrução e dos operandos, execução e armazenamento dos resultados. O processador, através de suas várias unidades funcionais pipeline, funciona de forma a permitir que, enquanto uma instruação esteja em fase de exeução, uma outra instrução possa estar na fase de busca simultaneamente.
+Da mesma forma em que uma linha de montagem, a execução de uma instrução pode ser dividida em subtarefas, como as fases de busca da instrução e dos operandos, execução e armazenamento dos resultados. O processador, através de suas várias unidades funcionais pipeline, funciona de forma a permitir que, enquanto uma instrução esteja em fase de execução, uma outra instrução possa estar na fase de busca simultaneamente.
 
-O pipeling pode ser empregado em sistemas de um ou mais processadores, em diversos níveis, e tem sido a técnica de paralelismo mais utilizada para aumentar o desempenho dos sistemas computacionais.
+O pipelinig pode ser empregado em sistemas de um ou mais processadores, em diversos níveis, além disso, tem sido a técnica de paralelismo mais utilizada para aumentar o desempenho dos sistemas computacionais.
 
 ![[Pasted image 20230305222434.png]]
 
 # Arquiteturas RISC e CISC
 
-Cada processador possui um conjunto definido de instruções de máquina, definidos por seu fabricante. As instruções de máquina fazem referências a detalhes, como registradores, modos de endereçamento e tipos de dados, que caracterizam um processador e suas funcionalidades.
+Cada processador possui um conjunto definido de instruções de máquina, definidos por seu fabricante. As instruções de máquina fazem referências a detalhes, como registradores, modos de endereçamento e tipos de dados que caracterizam um processador e suas funcionalidades.
 
-Quando um programa é escrito em linguagem de máquina de um determinado processador, ele não pode ser executada em uma máquina de arquitetura difrente, haja vista que o conjunto de instruções de um processador é específico de cada arquitetura.
+Quando um programa é escrito em linguagem de máquina de um determinado processador, ele não pode ser executado em uma máquina de arquitetura difrente, haja vista que o conjunto de instruções de um processador é específico de para cada arquitetura.
 
 ## Reduced Instruction Set Computer (RISC)
 
@@ -143,13 +143,13 @@ Essa arquitetura possui instruções complexas, que são interpretadas por micro
 ![[Pasted image 20230305223250.png]]
 
 
-Os microprogramas definem a linguagem de máquina de um computador CISC.  Na realidade,o código executável de um processador CISC é interpretado por microprogramas durante a sua execução, gerando microinstruções que, de fato, são executadas pelo hardware.
+Os microprogramas definem a linguagem de máquina de um computador CISC.  Na realidade,o código executável de um processador CISC é interpretado por microprogramas durante a sua execução, gerando outras microinstruções que, de fato, são executadas pelo hardware.
 
 Dessa forma, os processadores chamados microprogramáveis são aqueles que permitem a criação de novas instruções de máquina atráves de microprogramas.
 
 # Análise de Desempenho
 
-Uma das variáveis utilizadas na avaliação de desempenho de processadores é o intervalo de tempo entre os pulsos de sinal de um clock.  A frequência do clock é o inverso do ciclo de clock e indica o número de pulsos elétricos gerados em segundo.  A medida de frequência é dada em Hz e seus múltiplos.
+Uma das variáveis utilizadas na avaliação de desempenho de processadores é o intervalo de tempo entre os pulsos de sinal de um clock.  A frequência do clock é o inverso do ciclo de clock e indica o número de pulsos elétricos gerados em um segundo.  A medida de frequência é dada em Hz e seus múltiplos.
 
 Continuando, uma das formas de avaliar o desempenho de diferentes processadores é  pela comparação de tempo de execução de um mesmo programa. Esse tempo é denominado tempo de CPU, que leva em consideração apenas o tempo para execução de instruções pelo processador, não incluindo tempo de espera em I/O.
 
@@ -171,14 +171,32 @@ São chamados utilitários os serviços complementares do sistema operacional, c
 
 ## Tradutor
 
-Apesar das inúmeras vantagens referentes a praticidade e simplicidade proporcionadas pelas linguagens de montagem de alto nível, os programas escritos nessa linguagem não estão prontos para ser executados pelo processador. Então, eles tem que ser convertidos, ou seja, uma etapa de conversão das representações simbólicas em linguagem de máquina. Essa conversão é realizada por um utilitário denominado tradutor.
+Apesar das inúmeras vantagens referentes a praticidade e simplicidade proporcionadas pelas linguagens de montagem de alto nível, os programas escritos nessas linguagens não estão prontos para ser executados pelo processador. Então, eles tem que ser convertidos, ou seja, uma etapa de conversão das representações simbólicas em linguagem de máquina. Essa conversão é realizada por um utilitário denominado tradutor.
 
-O tradutor, ao fazer seu trabalho gera um módulo denominado módulo-objeto que se apresenta em código de máquina, entretanto, na maioria das vezes esse código ainda não pode ser executado. Isso ocorre em função de um programa poder chamar [[sub-rotinas]] externas, e, nesse caso, o tradutor não tem como associar o programa principal às sub-rotinas. Essa função é feita por um utilitário chamado linker.
+O tradutor, ao fazer seu trabalho gera um módulo denominado módulo-objeto que se apresenta em código de máquina, entretanto, na maioria das vezes esse código ainda não pode ser executado. Isso ocorre em função de um programa poder chamar [[sub-rotinas]] externas e, nesse caso, o tradutor não tem como associar o programa principal às sub-rotinas. Essa função é feita por um utilitário chamado linker.
 
 Dependendo do tipo de programa-fonte, existem dois tipos distintos de tradutores: montador e compilador.
 
-O montador (assembler) é responsável por traduzir um programa fonte em um módulo-objeto (ainda não executável). A linguagem de montagem é particular de cada processador, assim como a linguagem de máquina, isso faz com que os programas assembly não possam ser portado entre máquinas de arquitetura diferente.
-
 ![[Pasted image 20230324054201.png]]
+
+### Montador
+
+O montador (assembler) é responsável por traduzir um programa fonte em um módulo-objeto (geralmente ainda não executável, pois pode precisar da atuação do linker para buscar suas dependências). A linguagem de montagem é particular de cada processador, assim como a linguagem de máquina, isso faz com que os programas assembly não possam ser portado entre máquinas de arquitetura diferente.
+
+O montador traduz o código em linguagem de montagem diretamente para código de máquina, sem realizar transformações significativas no código. Além disso, o montador geralmente é usado para produzir programas de sistema e drivers de dispositivos, enquanto o compilador é usado para produzir programas de aplicativos.
+
+### Compilador
+
+Diferentemente do montador, o compilador trabalha com uma linguagem de alto nível, que não tem nenhuma relação direta com a máquina e, por conta disso, não tem que se envolver em detalhes sobre a arquitetura do processador. Assim programas fonte podem ser portados entre computadores de diversos fabricantes.
+
+De maneira geral, podemos visualizar o compilador como uma interface entre o S.O e o usuário, de maneira que é possível acessar diversos serviços do sistema sem a necessidade de uma linguagem de controle.
+
+Além disso, o compilador, ao fazer a tradução para linguagem de máquina, realiza análises mais profundas no código, podendo implementar otimizações na hora da execução.
+
+### Interpretador
+
+O interpretador é um tipo de tradutor que não gera um módulo-objeto.  Durante a execução de um programa, o interpretador traduz cada instrução e a executa imediatamente.
+
+A desvantagem de se utilizar um interpretador é o tempo gasto na tradução das instruções de um programa toda vez que ele for executado, uma vez que não existe a criação de um executável. A sua vantagem é a possibilidade de implementação de tipos de dados dinâmicos, ou seja, que podem mudar durante a execução de um programa e aumentando sua flexibilidade.
 
 [[EXERCÍCIOS]]
