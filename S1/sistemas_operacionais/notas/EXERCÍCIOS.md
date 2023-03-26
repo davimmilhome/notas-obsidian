@@ -1,4 +1,4 @@
- # [[CAP 1 - VISÃO GERAL]]
+ # [[CAP 1 - Visão Geral]]
 
 1° Como seria utilizar um computador sem um S.O? Quais são as principais funções de um S.O?.
 

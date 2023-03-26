@@ -11,12 +11,8 @@
             "id": "25f20fa7e3c84ebd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "S1/sistemas_operacionais/notas/CAP 2 - Conceitos de Hardware e Software.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -69,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "b3e1fc06b480d6ed",
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "S1/sistemas_operacionais/notas/CAP 2 - Conceitos de Hardware e Software.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "S1/sistemas_operacionais/notas/CAP 2 - Conceitos de Hardware e Software.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "S1/sistemas_operacionais/notas/CAP 2 - Conceitos de Hardware e Software.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -149,8 +140,14 @@
   },
   "active": "25f20fa7e3c84ebd",
   "lastOpenFiles": [
-    "sub-rotinas.md",
+    "CAP 4 - Estrutura do sistema operacional.md",
+    "Pasted image 20230325205549.png",
+    "Pasted image 20230325201214.png",
+    "S1/sistemas_operacionais/ARQUITETURA DE SISTEMAS OPERACIONAIS -MACHADO.md",
+    "S1/sistemas_operacionais/notas/CAP 1 - Visão Geral.md",
     "S1/sistemas_operacionais/notas/CAP 2 - Conceitos de Hardware e Software.md",
+    "Pasted image 20230325160230.png",
+    "sub-rotinas.md",
     "Sem título 3.canvas",
     "Sem título 2.canvas",
     "Sem título 1.canvas",
@@ -162,15 +159,10 @@
     "Pasted image 20230305223201.png",
     "Pasted image 20230305222434.png",
     "Pasted image 20230305221920.png",
-    "Pasted image 20230305221740.png",
-    "Pasted image 20230305221049.png",
     "S1/etica_digital/ÉTICA DIGITAL.md",
-    "S1/sistemas_operacionais/notas/CAP 1 - VISÃO GERAL.md",
     "S1/sistemas_operacionais/notas/EXERCÍCIOS.md",
     "S1/sistemas_operacionais/Arquitetura_de_Sistemas_Operacionais_edit.pdf",
-    "S1/sistemas_operacionais/ARQUITETURA DE SISTEMAS OPERACIONAIS -MACHADO.md",
     "CIÊNCIAS DA COMPUTAÇÃO.md",
-    "Pasted image 20230305210551.png",
     "S1/sistemas_operacionais/notas/SISTEMAS OPERACIONAIS.md",
     "S1/sistemas_operacionais/Arquitetura_de_Sistemas_Operacionais_Fra.pdf",
     "S1/sistemas_operacionais/solexerc-v3.2-Jan-2005.pdf",
