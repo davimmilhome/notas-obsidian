@@ -3,7 +3,7 @@
 
 Um sistema computacional é um conjunto de circuitos eletrônicos interligados, formado por processadores, memórias, registradores, barramentos e dispositivos de entrada e saida (E/S). Todos esses dispositivos manipulam dados na forma digital, o que proporciona uma maneira confiável de representação e transmissão de dados.
 
-Em 1940 foi desenvolvida uma arquitetura de sistema computacional que é aplamente utilizada até hoje, a arquitetura de Von Neumann. Essa arquitetura é norteado pelo princípio do armazenamento de dados e programas na memória, esse fator implica que as instruções dos programas e os dados são manipulados da mesma forma, ou seja, pelos mesmos componentes de hardware. A arquitetura de Von Neumann é composta de cinco elementos principais:
+Em 1940 foi desenvolvida uma arquitetura de sistema computacional que é aplamente utilizada até hoje, a arquitetura de Von Neumann. Essa arquitetura é norteada pelo princípio de armazenamento de dados e programas na memória, esse fator implica que as instruções dos programas e os dados são manipulados da mesma forma, ou seja, pelos mesmos componentes de hardware. A arquitetura de Von Neumann é composta de cinco elementos principais:
 
 * Unidade Central de Processamento (CPU)
 
@@ -11,7 +11,7 @@ Responsável por executar as instruções do programa e manipular os dados. Ele 
 
 * Memória 
 
-É o local onde o programa e os dados são armazenados. A memória é geralmente dividida em duas áreas principais: a memória principal, que é usada para armazenar programas e dados durante a execução do programa, e a memória secundária, que é usada para armazenar programas e dados permanentemente.
+É o local onde o programa e os dados são armazenados. A memória é geralmente dividida em duas áreas: a memória principal, que é usada para armazenar programas e dados durante a execução do programa, e a memória secundária, que é usada para armazenar programas e dados permanentemente.
 
 * Unidades de Entrada e Saída (E/S)
 
@@ -27,7 +27,7 @@ O sistema de interrupções é responsável por permitir que o sistema operacion
 
 ---
 
-A arquitetura de von Neumann é conhecida por sua simplicidade e flexibilidade, e é amplamente utilizada em uma variedade de aplicações. No entanto, uma das principais desvantagens da arquitetura de Von Neumann é que ela é limitada pela velocidade da memória. Por conta disso, a arquitetura de von Neumann não é ideal para lidar com problemas complexos, como aprendizado de máquina e inteligência artificial, que exigem grande quantidade de dados e capacidade de processamento paralelo.
+A arquitetura de von Neumann é conhecida por sua simplicidade e flexibilidade, e é amplamente utilizada em uma variedade de aplicações. No entanto, uma das principais desvantagens da arquitetura de Von Neumann é que ela é limitada pela velocidade da memória. Por conta disso, a arquitetura de von Neumann não é ideal para lidar com problemas complexos, como aprendizado de máquina e inteligência artificial, que exigem grande quantidade de dados e capacidade de processamento em paralelo.
 
 ![[Pasted image 20230305204434.png]]
 
@@ -39,7 +39,7 @@ Um processador é composto por três unidades:
 
 * unidade de controle
 
-É reposável por gerenciar as atividades de todos os componentes do computador, como gravação de dados em disco ou a busca de instruções em memória.
+É responsável por gerenciar as atividades de todos os componentes do computador, como gravação de dados em disco ou a busca de instruções em memória.
 
 * unidade lógica aritimética
 
@@ -68,7 +68,7 @@ A específicação do endereço é realizada através de um registrador denomina
 
 ![[Pasted image 20230305210028.png]]
 
-A memória principal pode ser classificada em função da sua volatilidade, que é a capacidade de a memória preservar seu conteúdo mesmo sem uma fonte de alimentação ativa. As mesmórias do tipo RAM são voláteis, quantos as ROM (ready only memory) e EPROM (erasable programmable ROM) são do tipo não voláteis.
+A memória principal pode ser classificada em função da sua volatilidade, que é a capacidade de a memória preservar seu conteúdo mesmo sem uma fonte de alimentação ativa. As memórias do tipo RAM são voláteis, em contraste,  as ROM (ready only memory) e EPROM (erasable programmable ROM) são do tipo não voláteis.
 
 ## Memória Cache
 
@@ -131,7 +131,7 @@ Quando um programa é escrito em linguagem de máquina de um determinado process
 
 ## Reduced Instruction Set Computer (RISC)
 
-Essa arquitetura se caracteriza por possuir poucas instruções de máquina, em geral bastante simples, que são executadas diretamente pelo hardware. Na sua maioria, essas intruções não acessam a memória principal, trabalhando principalmente com registradores (que se apresentam em grande número). Essa arquitetura permite mais velocidade e facilita o pipelining.
+Essa arquitetura se caracteriza por possuir poucas instruções de máquina, em geral bastante simples, que são executadas diretamente pelo hardware. Na sua maioria, essas instruções não acessam a memória principal, trabalhando principalmente com registradores (que se apresentam em grande número). Essa arquitetura permite mais velocidade e facilita o pipelining.
 
 ## Complex Instruction Set Computers (CISC)
 
@@ -143,7 +143,7 @@ Essa arquitetura possui instruções complexas, que são interpretadas por micro
 ![[Pasted image 20230305223250.png]]
 
 
-Os microprogramas definem a linguagem de máquina de um computador CISC.  Na realidade,o código executável de um processador CISC é interpretado por microprogramas durante a sua execução, gerando outras microinstruções que, de fato, são executadas pelo hardware.
+Os microprogramas definem a linguagem de máquina de um computador CISC. Além disso, o código executável de um processador CISC é interpretado por microprogramas durante a sua execução, gerando outras microinstruções que, de fato, são executadas pelo hardware.
 
 Dessa forma, os processadores chamados microprogramáveis são aqueles que permitem a criação de novas instruções de máquina atráves de microprogramas.
 
@@ -159,7 +159,7 @@ O tempo de espera para um determinado programa é o seguinte:
 
 Dessa forma, o desempenho do processador pode ser otimizado reduzindo o tempo de ciclo de clock ou o n° de ciclos utilizados na execução do programa.
 
-A técnica conhecida como benchmark é utilizada para comparação entre processadores. Uma das técnicas de benchmark entre processadores é a spec (System Performance Evaluation Cooperative). Aspectos como operações de E/S e componentes do sistema operacional também vem sendo introduzidos nos benchmarks para simular condições de uso real.
+A técnica conhecida como benchmark é utilizada para comparação entre processadores. Uma das técnicas de benchmark entre processadores é a SPEC (System Performance Evaluation Cooperative). Aspectos como operações de E/S e componentes do sistema operacional também vem sendo introduzidos nos benchmarks para simular condições de uso real.
 
 ![[Pasted image 20230324052652.png]]
 
@@ -171,13 +171,25 @@ São chamados utilitários os serviços complementares do sistema operacional, c
 
 ## Tradutor
 
-Apesar das inúmeras vantagens referentes a praticidade e simplicidade proporcionadas pelas linguagens de montagem de alto nível, os programas escritos nessas linguagens não estão prontos para ser executados pelo processador. Então, eles tem que ser convertidos, ou seja, uma etapa de conversão das representações simbólicas em linguagem de máquina. Essa conversão é realizada por um utilitário denominado tradutor.
+Apesar das inúmeras vantagens referentes a praticidade e simplicidade proporcionadas pelas linguagens de montagem de alto nível, os programas escritos nessas linguagens não estão prontos para ser executados pelo processador. Então, eles tem que ser convertidos, ou seja, ocorre uma etapa de conversão das representações simbólicas em linguagem de máquina. Essa conversão é realizada por um utilitário denominado tradutor.
 
-O tradutor, ao fazer seu trabalho gera um módulo denominado módulo-objeto que se apresenta em código de máquina, entretanto, na maioria das vezes esse código ainda não pode ser executado. Isso ocorre em função de um programa poder chamar [[sub-rotinas]] externas e, nesse caso, o tradutor não tem como associar o programa principal às sub-rotinas. Essa função é feita por um utilitário chamado linker.
+O tradutor, ao fazer seu trabalho gera um output denominado módulo-objeto, que se apresenta em código de máquina, entretanto, na maioria das vezes esse código ainda não pode ser executado. Isso ocorre em função de um programa poder chamar [[sub-rotinas]] externas e, nesse caso, o tradutor não tem como associar o programa principal às sub-rotinas. Essa função é feita por um utilitário chamado linker.
 
 Dependendo do tipo de programa-fonte, existem dois tipos distintos de tradutores: montador e compilador.
 
 ![[Pasted image 20230324054201.png]]
+
+### Linker
+
+É o resposável por gerar, a partir de um ou mais módulos-objeto um único programa executável. Ou seja, ele resolve todas as referências entre diferentes módulos referenciados no código fonte  e reseva espaço na memória para a execução do programa.
+
+![[Pasted image 20230325160230.png]]
+
+Para resolver essas referências, o linker também pode pesquisar em bibliotecas do sistema ou do próprio usuário.
+
+Outra função importante do linker é a relocação, que determina a região na memória na qual o programa será carregado para a execução.  Antes se utilizavam posições prefixadas absolutas para posições na memória, porém,com o advento dos sistemas multiprogramáveis esse tipo de relocação de difícil implementação já que é pouco provável que um determinado endereço prefixado esteja disponível. A solução para esse problema é permitir que o programa seja carregado em regiões diferentes toda vez que for trazido para a memória (código relocável). Esse tipo de relocação éfeita por outro utilitário, o loader.
+
+Em alguns sistemas, o compilador pode realizar mais do que suas funções básicas, como resolver referências de endereço e, dessa forma, o programa não precisaria passar pela linkedição. Nesse caso, um outro utilitário linking-loader fica responsável pela carga do programa na memória e por sua execução. Nesse tipo de sistema, o programa passa por um processo de linking dinâmico, onde as referências globais são resolvidas no momento da execução. A grande desvantagem dessa implementação é a sobrecarga de processamento que existe em cada execução do programa, problema que não ocorre em sistemas que possuem linkers independentes.
 
 ### Montador
 
@@ -187,11 +199,23 @@ O montador traduz o código em linguagem de montagem diretamente para código de
 
 ### Compilador
 
-Diferentemente do montador, o compilador trabalha com uma linguagem de alto nível, que não tem nenhuma relação direta com a máquina e, por conta disso, não tem que se envolver em detalhes sobre a arquitetura do processador. Assim programas fonte podem ser portados entre computadores de diversos fabricantes.
+Diferentemente do montador, o compilador trabalha com uma linguagem de alto nível, que não tem nenhuma relação direta com a máquina e, por conta disso, não têm que se envolver em detalhes sobre a arquitetura do processador. Assim programas-fonte podem ser portados entre computadores de diversos fabricantes.
 
 De maneira geral, podemos visualizar o compilador como uma interface entre o S.O e o usuário, de maneira que é possível acessar diversos serviços do sistema sem a necessidade de uma linguagem de controle.
 
-Além disso, o compilador, ao fazer a tradução para linguagem de máquina, realiza análises mais profundas no código, podendo implementar otimizações na hora da execução.
+Além disso, diferentemente do montador o compilador, ao fazer a tradução para linguagem de máquina, realiza análises mais profundas no código, podendo implementar otimizações na hora da execução.
+
+### Loader
+
+O loader é responsável por carregar na memória principal um programa a ser executado. O processo de carga varia com o código gerado a partir do linker, a partir disso, o loader pode ser classificado como absoluto ou relocável.
+
+* Loader absoluto
+
+Se o código executável for do tipo absoluto o loader só necessita conhecer o endereço de memória inicial e o tamanho do módulo para realizar o carregamento. Então, o loader transfere o programa da memória secundária para a memória principal e inicia a execução.
+
+* Loader relocável
+
+No caso do código relocável, o programa pode ser carregado em qualquer posição de memória, e o loader é responsável pela relocação no momento do carregamento.
 
 ### Interpretador
 
@@ -199,4 +223,12 @@ O interpretador é um tipo de tradutor que não gera um módulo-objeto.  Durante
 
 A desvantagem de se utilizar um interpretador é o tempo gasto na tradução das instruções de um programa toda vez que ele for executado, uma vez que não existe a criação de um executável. A sua vantagem é a possibilidade de implementação de tipos de dados dinâmicos, ou seja, que podem mudar durante a execução de um programa e aumentando sua flexibilidade.
 
+### Depurador (debugger)
+
+A depuração é um dos estágios de desenvolvimento, e necessita da utilização de ferramentas adequadas para acelerar o processo de correção de programas. Então, esse utilitário permite ao usuário acompanhar toda a execução de um programa a fim de detectar erros na lógica oferecendo recursos como:
+
+* Acompanhamento instrução por instrução
+* Possibilidade de  alterar e visualizar o conteúdo de variáveis
+* Implementar pontos de parada no programa para melhorar a análise
+* Especificar uma variável observada onde, toda vez que seu valor for modificado, o programa envia uma mensagem (watchpoint)
 [[EXERCÍCIOS]]
