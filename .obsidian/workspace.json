@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b4cc728be995ba47",
+        "id": "f6b0253f8c5216ac",
         "type": "tabs",
         "children": [
           {
-            "id": "8f8c87b8ab81cae8",
+            "id": "41e20d68b9ee3018",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "S1/sistemas_operacionais/notas/CAP 4 - Estrutura do sistema operacional.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "140f43662b0cb9bf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "S1/sistemas_operacionais/notas/CAP 3 - Concorrência.md",
+                "file": "S1/sistemas_operacionais/notas/CAP 7 - Sincronização e Comunicação entre processos.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -77,6 +64,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "5658105a97c01e46",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -99,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "S1/sistemas_operacionais/notas/CAP 3 - Concorrência.md",
+                "file": "S1/sistemas_operacionais/notas/CAP 7 - Sincronização e Comunicação entre processos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "S1/sistemas_operacionais/notas/CAP 3 - Concorrência.md",
+                "file": "S1/sistemas_operacionais/notas/CAP 7 - Sincronização e Comunicação entre processos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "S1/sistemas_operacionais/notas/CAP 3 - Concorrência.md"
+                "file": "S1/sistemas_operacionais/notas/CAP 7 - Sincronização e Comunicação entre processos.md"
               }
             }
           }
@@ -160,45 +155,46 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "140f43662b0cb9bf",
+  "active": "41e20d68b9ee3018",
   "lastOpenFiles": [
-    "assets/imgs/Pasted image 20230504054146.png",
-    "assets/imgs/Pasted image 20230504052156.png",
-    "assets/imgs/Pasted image 20230504051858.png",
-    "S1/sistemas_operacionais/notas/CAP 3 - Concorrência.md",
+    "assets/imgs/Pasted image 20230507200914.png",
+    "assets/imgs/Pasted image 20230507200556.png",
+    "assets/imgs/Pasted image 20230507200227.png",
+    "assets/imgs/Pasted image 20230507195541.png",
+    "assets/imgs/Pasted image 20230507184351.png",
+    "assets/imgs/Pasted image 20230507174346.png",
+    "assets/imgs/Pasted image 20230507174242.png",
+    "assets/imgs/Pasted image 20230507173715.png",
+    "assets/imgs/Pasted image 20230507173701.png",
+    "assets/imgs/Pasted image 20230507173125.png",
     "S1/sistemas_operacionais/ARQUITETURA DE SISTEMAS OPERACIONAIS -MACHADO.md",
-    "S1/sistemas_operacionais/notas/SISTEMAS OPERACIONAIS.md",
-    "CIÊNCIAS DA COMPUTAÇÃO.md",
-    "S1/sistemas_operacionais/notas/CAP 4 - Estrutura do sistema operacional.md",
-    "S1/sistemas_operacionais/sub-rotinas.md",
-    "README.md",
-    "assets/imgs/Pasted image 20230326092639.png",
+    "S1/sistemas_operacionais/notas/CAP 7 - Sincronização e Comunicação entre processos.md",
     "Sem título 2.canvas",
     "Sem título 1.canvas",
-    "Sem título 3.canvas",
     "Sem título.canvas",
-    "assets/imgs/Pasted image 20230225111400.png",
-    "assets/imgs",
-    "assets",
-    "S1/sistemas_operacionais/~$sta_1_s.o_Davi_Suelen.docx",
-    "S1/sistemas_operacionais/lista_1_s.o_Davi_Suelen.docx",
-    "S1/sistemas_operacionais/Não confirmado 731420.crdownload",
-    "assets/imgs/Pasted image 20230326092101.png",
-    "assets/imgs/Pasted image 20230326091706.png",
-    "assets/imgs/Pasted image 20230326090116.png",
-    "assets/imgs/Pasted image 20230326085300.png",
-    "assets/imgs/Pasted image 20230326084923.png",
-    "S1/sistemas_operacionais/notas/CAP 1 - Visão Geral.md",
-    "assets/imgs/Pasted image 20230325205549.png",
+    "Sem título 3.canvas",
+    "S1/sistemas_operacionais/notas/CAP 3 - Concorrência.md",
+    "assets/imgs/Pasted image 20230506212723.png",
+    "S1/sistemas_operacionais/resources/sub-rotinas.md",
+    "S1/sistemas_operacionais/resources/solexerc-v3.2-Jan-2005.pdf",
+    "S1/sistemas_operacionais/resources/lista_1.docx",
+    "S1/sistemas_operacionais/resources/Arquitetura_de_Sistemas_Operacionais_Fra.pdf",
+    "S1/sistemas_operacionais/resources/Arquitetura_de_Sistemas_Operacionais_edit.pdf",
+    "S1/sistemas_operacionais/resources/lista_1_s.o_Davi_Suelen.docx",
+    "S1/sistemas_operacionais/resources",
+    "S1/sistemas_operacionais/Nova pasta",
+    "S1/sistemas_operacionais/notas/CAP 4 - Estrutura do sistema operacional.md",
+    "S1/sistemas_operacionais/solexerc-v3.2-Jan-2005.pdf",
+    "S1/sistemas_operacionais/Arquitetura_de_Sistemas_Operacionais_Fra.pdf",
+    "S1/sistemas_operacionais/Arquitetura_de_Sistemas_Operacionais_edit.pdf",
     "S1/sistemas_operacionais/notas/EXERCÍCIOS.md",
+    "S1/sistemas_operacionais/notas/SISTEMAS OPERACIONAIS.md",
+    "CIÊNCIAS DA COMPUTAÇÃO.md",
+    "README.md",
+    "S1/sistemas_operacionais/notas/CAP 1 - Visão Geral.md",
     "S1/sistemas_operacionais/notas/CAP 1 - VISÃO GERAL.md",
     "S1/sistemas_operacionais/notas/CAP 2 - Conceitos de Hardware e Software.md",
-    "S1/sistemas_operacionais/lista_1.docx",
     "S1/etica_digital/ÉTICA DIGITAL.md",
-    "S1/sistemas_operacionais/Arquitetura_de_Sistemas_Operacionais_edit.pdf",
-    "S1/sistemas_operacionais/Arquitetura_de_Sistemas_Operacionais_Fra.pdf",
-    "S1/sistemas_operacionais/solexerc-v3.2-Jan-2005.pdf",
-    "S1/etica_digital/etica-e-legislacao-contabil.pdf",
     "2023-02-26.md",
     "S1/Sem título.md"
   ]

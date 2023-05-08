@@ -2,3 +2,4 @@
 [[CAP 2 - Conceitos de Hardware e Software]]
 [[CAP 3 - Concorrência]]
 [[CAP 4 - Estrutura do sistema operacional]]
+[[CAP 7 - Sincronização e Comunicação entre processos]]
