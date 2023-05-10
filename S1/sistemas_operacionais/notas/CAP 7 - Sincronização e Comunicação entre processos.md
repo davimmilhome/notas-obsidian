@@ -137,5 +137,67 @@ Essa solução garante a exclusão mútua e não gera um bloqueio simultâneo, e
 
 * Algorítimo de Dekker
 
+Foi a primeira solução de software que garantiu a exclusão mútua sem a incorrência de outros problemas. Esse é um algorítimo de fato complexo e pode ser encontrado em Ben-Ari(1990). Posteriormente, Peterson propôs uma solução mais simples.
+
+* Algorítimo de Peterson
+
+Similar ao terceiro algorítimo, além das variáveis de condição CA e CB, introduz a variável de Vez para resolver os conflitos gerados pela concorrência.
+
+Antes de acessar a região crítica, o processo sinaliza esse desejo através da variável de condição, porém, o processo cede o uso do recurso a outro processo indicado pela variável Vez. Em seguida, é executado um WHILE como protocolo de entrada na região crítica. Nesse caso, além da garantia de exclusão mútua, o bloqueio indefinido de um dos processos não ocorrerá, já que a variável Vez sempre permitirá a continuidade de execução de um dos processos.
+
+![[Pasted image 20230510151144.png]]
+
+* Algorítimo para execlusão mútua de N processos
+
+Apesar de as soluções apresentadas garatirem a exclusão mútua, todas possuem uma deficiência (busy wait). Essa deficiência consome tempo do processador desnecessariamente.
+
+A solução para esse problema foi a introdução de mecanismos de sincronização que permitiram que um processo, quando não pudesse entrar em sua região crítica, fosse colocado em estado de espera. Esses mecanismo são conhecidos como semáforos e monitores.
+
+## Sincronização condicional
+
+Sincronização condicional é uma situação onde o acesso ao recurso compartilhado exige a sincronização de processos vinculada a uma condição de acesso. Determinado recurso pode ainda não se encontrar na condição para uso e, nesse caso, o processo que seja acessá-lo fica bloqueado até que o recurso fique disponível.
+
+Como exemplo desse tipo de processo, imagine o seguinte problema de sincronizão condicional (problema produtor/consumidor). O recurso compartilhado é um buffer, sempre que a variável Cont for igual a zero, significa que o bugger está vazio e o processo conssumidor deve permanecer aguardando até que se grave um dado. Da mesma forma, quando a variável Cont foir igual a TamBuf(variável que indica que o buffer está cheio), significa que o processo Produtor deve aguardar a leitura de um novo dado. Nessa solução, a tarefa de colocar e retirar dados do buffer é realizada por dois procedimentos (Grava_buffer e Le_buffer), executados de forma mutualmente exclusiva (execto para a variável Cont que é compartilhada).
+
+![[Pasted image 20230510151959.png]]
+
+Esse modelo resolve a questão da sincronização, porém, a questão da esperá ocupada ainda está presente.
+
+## Semáforos
+
+O conceito de semáforo é um mecanismo de sincronização que permite implementar, de forma simples, a exclusão mútua e a sincronização condicional em processos.
+
+Um semáforo é uma variável inteira, não negativa, que só pode ser manipulada por duas instruções (UP e DOWN. A execução dessas instruções não pode ser interrompida.  A  instrução UP  incrementa uma unidade ao valor do semáforo, enquanto a instrução DOWN decrevemnta a variável. Como, por definição, valores negativos não podem ser atribuídos a um semáforo, a instrução DOWN executa em um semáforo com o valor 0, faz com que o processo entre em estado de espera.
+
+Os semáforos podem ser do tipo binários ou contadores. Os semáforos binários, também chamados de mutexes, só podem assumir o valor zero ou um enqunaot os semáforos contadores podem assumir qualquer inteiro positivo.
+
+### Exclusão mútua utilizando semáforos
+
+A implementação da exclusão mútua de semáforos faz com que o busy await não aconteça, sendo uma alternativa de melhor befícios as demais.
+
+As instruções UP e DOWn funcionam como protocolos de entrada e saída de um processo a sua região crítica. Se o valor do semáforo é igual a 1, indica que nenhum processo está utilizando o recurso, enquanto o valor 0 indica que o recurso está ocupado.
+
+Quando um processo deseja entrar em sua região crítica ele executa uma instrução DOWN. Caso a instrução seja executada em um semáforo 0, o processo fica impedido do acesso, permanecendo em estado de espera (não gerando overhead do processador).
+
+Ao terminar a utilização da região crítica, um determinado processo executa uma instrução UP no semáforo, liberando o acesso ao recurso. O sistema selecionará um processo de fila de espera alternando o estado do próximo processo da fila para pronto.
+
+![[Pasted image 20230510152929.png]]
+
+
+
+![[Pasted image 20230510152949.png]]
+
+![[Pasted image 20230510153005.png]]
+
+
+### Sincronização condicional utilizando semáforos
+
+Além de permitir a exclusão mútua, os semáforos permitem a sincronização condicional.
+
+No caso do problema do produtor/consumidor são utilizados dois mutexes para essa operação, quando o semáforo Vazio for 0, significa que o buffer está cheio e o processo produtor deverá aguardar,  analogamente, quando o semáforo Cheio for 0,significa que o buffer está vazio e consumidor deverá aguardar.
+
+
+___ 
+Semáforos do tipo contadores também são bastante úteis, aplicáveis em problemas de sincronização condicional onde existem processos concorrentes alocando recursos do mesmo tipo (pool de recursos). Nesse caso, o semáforo é iniciado com o número total de recursos, executa um down subtraindo um de recurso disponíveis, e assim por diante.
 
 
