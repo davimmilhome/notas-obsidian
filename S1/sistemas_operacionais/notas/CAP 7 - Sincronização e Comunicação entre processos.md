@@ -44,7 +44,7 @@ Nem sempre após a exeuçãos dos processo A e B em concorrência, o valor de X 
 
 ![[Pasted image 20230507174346.png]]
 
-Considere que o processo A carrega o valor de X no registrador Ra, some 1 e, antes de guardar o valor de X seja interrompido. Nesse instante, o processo B inicia sua execução, carrega X em Rb e subrtrai 1, após isso, o processo B também é interrompido dando lugar ao processo A. O processo A atribui o valor 3 a X, em seguida, B atribui o valor 1 a X e sobrepõe aquilo que havia sido gravado pelo processo A. 
+Considere que o Processo A carrega o valor de X no registrador Ra, some 1 e, antes de guardar o valor de X seja interrompido. Nesse instante, o processo B inicia sua execução, carrega X em Rb e subrtrai 1, após isso, o processo B também é interrompido dando lugar ao processo A. O processo A atribui o valor 3 a X, em seguida, B atribui o valor 1 a X e sobrepõe aquilo que havia sido gravado pelo processo A. 
 
 No exemplo acima, o valor final da variável X é incosistente em função da forma concorrente com que os dois processos executaram.
 
@@ -92,7 +92,8 @@ Apesar do apresentado, essa solução pode ser útil para situações como execu
 
 Muitos processadores possuem uma instrução de máquina especial que permite ler uma variável, armazenar seu conteúdo em outra área e atribuir um novo valor a mesma variável. Essa instrução especial é chamada de *instrução test-and-set* e tem como característica ser executada sem interrupção, ou seja, trata-se de uma instrução indivisível.
 
-A instrução Test and Set consiste em duas etapas: Teste e Definição. Durante a etapa de teste, a instrução lê o valor atual de uma variável compartilhada e verifica se ela está definida como "verdadeira" ou "falsa". Se a variável for "falsa", o processo pode acessar o recurso compartilhado, caso contrário, o processo deve esperar até que a variável se torne "falsa". Na etapa de Definição, a instrução define o valor da variável como "verdadeiro" para indicar que um processo está acessando o recurso compartilhado e impede que outros processos possam acessá-lo. (GPT)
+*A instrução Test and Set consiste em duas etapas: teste e definição.*
+Durante a etapa de teste, a instrução lê o valor atual de uma variável compartilhada e verifica se ela está definida como "verdadeira" ou "falsa". Se a variável for "falsa", o processo pode acessar o recurso compartilhado, caso contrário, o processo deve esperar até que a variável se torne "falsa". Na etapa de Definição, a instrução define o valor da variável como "verdadeiro" para indicar que um processo está acessando o recurso compartilhado e impede que outros processos possam acessá-lo. (GPT)
 
 O uso dessa abordagem oferece vantagens, como por exemplo, a simplicidade na implementação e o uso da solução em arquiteturas de múltiplos processadores. A principal desvantagem é a possibilidade de starvation, advinda da  arbitrariedade na seleção do processo para acesso ao recurso.
 
@@ -167,19 +168,19 @@ Esse modelo resolve a questão da sincronização, porém, a questão da esperá
 
 O conceito de semáforo é um mecanismo de sincronização que permite implementar, de forma simples, a exclusão mútua e a sincronização condicional em processos.
 
-Um semáforo é uma variável inteira, não negativa, que só pode ser manipulada por duas instruções (UP e DOWN. A execução dessas instruções não pode ser interrompida.  A  instrução UP  incrementa uma unidade ao valor do semáforo, enquanto a instrução DOWN decrementa a variável. Como, por definição, valores negativos não podem ser atribuídos a um semáforo, a instrução DOWN executa em um semáforo com o valor 0, faz com que o processo entre em estado de espera.
+Um semáforo é uma variável inteira, não negativa, que só pode ser manipulada por duas instruções (UP e DOWN. A execução dessas instruções não pode ser interrompida.  A  instrução UP  incrementa uma unidade ao valor do semáforo, enquanto a instrução DOWN decrementa a variável. Como, por definição, valores negativos não podem ser atribuídos a um semáforo, a instrução DOWN se executada em um semáforo com o valor 0, faz com que o processo entre em estado de espera.
 
 Os semáforos podem ser do tipo binários ou contadores. Os semáforos binários, também chamados de mutexes, só podem assumir o valor zero ou um enquanto os semáforos contadores podem assumir qualquer inteiro positivo.
 
 ### Exclusão mútua utilizando semáforos
 
-A implementação da exclusão mútua de semáforos faz com que o busy await não aconteça, sendo uma alternativa de melhor befícios as demais.
+A implementação da exclusão mútua de semáforos faz com que o busy wait não aconteça, sendo uma alternativa de melhor befícios as demais.
 
 As instruções UP e DOWN funcionam como protocolos de entrada e saída de um processo a sua região crítica. Se o valor do semáforo é igual a 1, indica que nenhum processo está utilizando o recurso, enquanto o valor 0 indica que o recurso está ocupado.
 
 Quando um processo deseja entrar em sua região crítica ele executa uma instrução DOWN. Caso a instrução seja executada em um semáforo 0, o processo fica impedido do acesso, permanecendo em estado de espera (não gerando overhead do processador).
 
-Ao terminar a utilização da região crítica, um determinado processo executa uma instrução UP no semáforo, liberando o acesso ao recurso. O sistema selecionará um processo de fila de espera alternando o estado do próximo processo da fila para pronto.
+Ao terminar a utilização da região crítica, um determinado processo executa uma instrução UP no semáforo, liberando o acesso ao recurso. Então, o sistema selecionará um processo de fila de espera alternando o estado do próximo processo da fila para pronto.
 
 ![[Pasted image 20230510152929.png]]
 
@@ -203,17 +204,15 @@ Semáforos do tipo contadores também são bastante úteis, aplicáveis em probl
 
 ## Monitores
 
-Monitores são mecanismos de alto nível que facilitam o desenvolvimento de aplicações concorrentes. Diferente dos semáforos, os monitores são considerados mecanismos de sincronização estruturados, ao contrário dos semáforoes, que são considerados não-estruturados.
-
-Atualmente, a maioria das linguagens dá suporte ao uso de monitores.
+Monitores são mecanismos de alto nível que facilitam o desenvolvimento de aplicações concorrentes. Diferente dos semáforos, os monitores são considerados mecanismos de sincronização estruturados. Atualmente, a maioria das linguagens dá suporte ao uso de monitores.
 
 Nota: no caso, são considerados estruturados em função de serem implementados pelo compilador.
 
 A característica mais importante do monitor é a implementação automática da exclusão mútua, ou seja, somente um processo pode estar executando procedimentos "dentro" de um monitor em determinado instante. 
 
-No caso, se um processo fizer uma chamada a um procedimento de monitor, o monitor verifica se já existe outro processo executando algum procedimento. Caso existe, o processo ficará aguardando sua vem em uma fila de entrada.
+No caso, se um processo fizer uma chamada a um procedimento de monitor, o monitor verifica se já existe outro processo executando algum procedimento. Caso exista, o processo que fez a solicitação ficará aguardando sua vez em uma fila de entrada.
 
-As variáveis globais de um monitor são visíveis apenas aos procedimentos de sua estrtutura, sendo inacessíveis fora do contexto do monitor. Toda a inicialização das variáveis é realizada por um bloco de comandos do monitor, sendo executada na ativação do programa onde está declarado o monitor.
+As variáveis globais de um monitor são visíveis apenas aos procedimentos de sua estrutura, sendo inacessíveis fora do contexto do monitor. Toda a inicialização das variáveis é realizada por um bloco de comandos do monitor, sendo executada na ativação do programa onde está declarado o monitor.
 
 ![[Pasted image 20230520130251.png]]
 
@@ -221,7 +220,7 @@ As variáveis globais de um monitor são visíveis apenas aos procedimentos de s
 
 Através de variáveis especiais de condição, é possível associar a execução de um procedimento que faz parte de um monitor a uma determinada condição. Garantindo a sincronização condicional.
 
-As variáveis especiais de condição são manipuladas por intermédio de duas instruções, WAIT e SIGNAL. A isntrução WAIT faz com que o processo seja colocado no estado de espera, até que algum outro processo sinalize com a instrução SIGNAL que a condição de espera foi satisfeita.  Caso o SIGNAL seja executada e não haja processo aguardando a condição, nada acontecerá.
+As variáveis especiais de condição são manipuladas por intermédio de duas instruções, WAIT e SIGNAL. A instrução WAIT faz com que o processo seja colocado no estado de espera, até que algum outro processo sinalize com a instrução SIGNAL que a condição de espera foi satisfeita.  Caso o SIGNAL seja executada e não haja processo aguardando a condição, nada acontecerá.
 
 # Troca de mensagens
 
@@ -243,9 +242,9 @@ O principal problema nesse tipo de menssageria é a necessidade da especificaç�
 
 * Comunicação indireta
 
-Para esse tipo de comunicação, utiliza-se uma área compartilhada onde as menssagens podem ser colocadas pelo transmissor e retiradas pelo receptor. Esse tipo de bufffer é conhecido como mailbox ou port, e suas características, como identificação e capacidade de armazenamento de mensagens, são definidas no momento de sua criação. 
+Para esse tipo de comunicação, utiliza-se uma área compartilhada onde as menssagens podem ser colocadas pelo transmissor e retiradas pelo receptor. Esse tipo de buffer é conhecido como mailbox ou port, e suas características, como identificação e capacidade de armazenamento de mensagens, são definidas no momento de sua criação. 
 
-Na comunicação indireta, vários processos podem estar associados ao mailbox e os parâmetros dos procedimentos SEND e RECIEVE passam a ser nomes de amilboxes ao invés de processos.
+Na comunicação indireta, vários processos podem estar associados ao mailbox e os parâmetros dos procedimentos SEND e RECIEVE passam a ser nomes de mailboxes ao invés de processos.
 
 ![[Pasted image 20230520131957.png]]
 
@@ -299,21 +298,21 @@ A terceira condição (não preempção) pode ser evitado quando é permitido qu
 
 A última maneira de evitar um deadlock é exlcuir a possibilidade da quarta condição (espera circular). Uma forma de implementar esse mecanismo é forçar o processo a utilizar somente um recurso por vez. Caso o processo necessite de outro recurso, o recurso já alocado deve ser liberado. Esta condição restringiria muito o grau de compartilhamento e processamento de alguns programas.
 
-A prevenção de deadlocks é bastante limitada e, por isso, não é utilizada na prática. É possível evitar o deadlock, mesmo se todas as condições necessárias à sua ocorrência estejam presentes. A solução mais conhecida para esse problema é o algorítimo do Banqueiro.
+A prevenção de deadlocks é bastante limitada e, por isso, não é utilizada na prática. É possível evitar o deadlock, mesmo se todas as condições necessárias à sua ocorrência estejam presentes. A solução mais conhecida para esse problema é o algoritimo do Banqueiro.
 
 ## Detecção do Deadlock
 
 Para detectar os deadlocks, os S.O devem manter estruturas de dados capazes de identificar cada recurso do sistema, o processo que está alocando e os processos que esperam a liberação desse recurso. Toda vez que um recurso é alocado ou liberado por um processo, a estrutura de dados deve ser atualizada. Geralmente, os algorítimos que implementam esse mecanismo verificam a existência de espera circular, percorrendo toda a esturutura sempre que um processo solicita um recurso e ele não pode ser imediatamente garantido.
 
-Dependendo do tipo de sistema, o ciclo de busca por um deadlock pode variar. Em sistemas de time-sharing, o tempo de busca por deadlocks pode ser maior, sem compromenter o desempenho e confiabilidade do sistema. Já em sistemas de real-time, o devem constatemente certifica-se da ocorrência de deadlocks, porém, a  maior segurança gera maiopr overhead.
+Dependendo do tipo de sistema, o ciclo de busca por um deadlock pode variar. Em sistemas de time-sharing, o tempo de busca por deadlocks pode ser maior, sem comprometer o desempenho e confiabilidade do sistema. Já em sistemas de real-time, deve-se constatemente certificar-se da ocorrência de deadlocks, porém, a  maior segurança gera maior overhead.
 
 ## Correção de Deadlocks
 
-Após a deteção, o S.O deverá de alguma forma corrigir o problema. Uma solução bastante utilizada é, simplismente, eliminar um ou mais processos envolvidos no deadlock e desalocar os recursos já garantidos por eles (quebrando a espera circular).
+Após a detecção, o S.O deverá de alguma forma corrigir o problema. Uma solução bastante utilizada é, simplesmente, eliminar um ou mais processos envolvidos no deadlock e desalocar os recursos já garantidos por eles (quebrando a espera circular).
 
-A eliminação dos processos envolvidos e, consequentemente, a liberação de seus recursos podem não ser simples, dependendo do tipo de recurso envolvido. Se um processo estiver atualizado um arquivo ou imprimindo uma listagem, o sistema deve garantir que os recursos sejam liberados sem problemas. Os processos eliminados não tem como ser recuperados.
+A eliminação dos processos envolvidos e, consequentemente, a liberação de seus recursos pode não ser simples, dependendo do tipo de recurso envolvido. Se um processo estiver atualizado um arquivo ou imprimindo uma listagem, o sistema deve garantir que os recursos sejam liberados sem problemas. Os processos eliminados não tem como ser recuperados.
 
-A escolha do processo a ser eliminado é feita, normalmente, de forma aleatória ou com base em algum tipo de prioridade. Etretanto, este esquema pode consumir considerávelmente o tempo do processador, ou seja, gerando um elevado overhead ao sistema.
+A escolha do processo a ser eliminado é feita, normalmente, de forma aleatória ou com base em algum tipo de prioridade. Entretanto, este esquema pode consumir considerávelmente o tempo do processador, ou seja, gerando um elevado overhead ao sistema.
 
 Uma solução menos drástica envolve a liberação de apenas alguns recursos alocados aos processos para outros processos, até que o ciclo de espera termine. Para esta solução, é necessário que o sistema possa suspender um processo, liberar seus recursos e, após a solução do problema, retornar à execução do processo, sem perder o processamento já realizado. Esse mecanismo é conhecido como rollback e, além do overhead, é muito difícil de ser implementado, pois depende bastante da aplicação que está sendo processada.
 
