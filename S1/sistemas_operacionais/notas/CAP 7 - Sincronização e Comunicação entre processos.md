@@ -316,4 +316,4 @@ A escolha do processo a ser eliminado é feita, normalmente, de forma aleatória
 
 Uma solução menos drástica envolve a liberação de apenas alguns recursos alocados aos processos para outros processos, até que o ciclo de espera termine. Para esta solução, é necessário que o sistema possa suspender um processo, liberar seus recursos e, após a solução do problema, retornar à execução do processo, sem perder o processamento já realizado. Esse mecanismo é conhecido como rollback e, além do overhead, é muito difícil de ser implementado, pois depende bastante da aplicação que está sendo processada.
 
-
+[[EXERCÍCIOS]]

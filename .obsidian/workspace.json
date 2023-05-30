@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "f6b0253f8c5216ac",
+        "id": "9e2bbcac01381e4a",
         "type": "tabs",
         "children": [
           {
-            "id": "5f5d7f9c1ca4f162",
+            "id": "dd5e811b7af1ff99",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "S1/sistemas_operacionais/notas/CAP 10 - Gerência de memória virtual.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -73,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "b3e1fc06b480d6ed",
@@ -89,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "S1/sistemas_operacionais/notas/CAP 10 - Gerência de memória virtual.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "S1/sistemas_operacionais/notas/CAP 10 - Gerência de memória virtual.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "S1/sistemas_operacionais/notas/CAP 10 - Gerência de memória virtual.md"
+              }
             }
           }
         ]
@@ -146,27 +155,36 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "5f5d7f9c1ca4f162",
+  "active": "dd5e811b7af1ff99",
   "lastOpenFiles": [
+    "assets/imgs/Pasted image 20230530133108.png",
+    "assets/imgs/Pasted image 20230530133043.png",
+    "assets/imgs/Pasted image 20230530114346.png",
+    "assets/imgs/Pasted image 20230530114128.png",
+    "assets/imgs/Pasted image 20230530113854.png",
+    "S1/sistemas_operacionais/notas/CAP 10 - Gerência de memória virtual.md",
     "S1/sistemas_operacionais/notas/CAP 7 - Sincronização e Comunicação entre processos.md",
-    "S1/sistemas_operacionais/notas/CAP 8 -.md",
+    "S1/sistemas_operacionais/ARQUITETURA DE SISTEMAS OPERACIONAIS -MACHADO.md",
+    "Sem título.canvas",
+    "S1/sistemas_operacionais/notas/CAP 9 - Gerência de memória.md",
+    "Programing/GIT/NOTAS.md",
+    "assets/imgs/Pasted image 20230529224418.png",
+    "assets/imgs/Pasted image 20230529224153.png",
+    "assets/imgs/Pasted image 20230529222932.png",
+    "assets/imgs/Pasted image 20230529221936.png",
+    "CIÊNCIAS DA COMPUTAÇÃO.md",
+    "Programing/GIT/GIT.md",
+    "Programing/GIT",
+    "Programing/VERSIONAMENTO.md",
+    "Programing/PROGRAMACÃO.md",
+    "Programing",
     "assets/imgs/Pasted image 20230520145151.png",
     "assets/imgs/Pasted image 20230520131957.png",
-    "assets/imgs/Pasted image 20230520131304.png",
-    "assets/imgs/Pasted image 20230520130251.png",
-    "assets/imgs/Pasted image 20230510153005.png",
-    "assets/imgs/Pasted image 20230510152949.png",
-    "assets/imgs/Pasted image 20230510152929.png",
-    "assets/imgs/Pasted image 20230510151959.png",
-    "assets/imgs/Pasted image 20230510151144.png",
-    "S1/b_d_1/AV2.jpeg",
     "S1/b_d_1/Atividade-Avaliativa-2.pdf",
     "S1/b_d_1/Atividade-Avaliativa-1.pdf",
     "S1/b_d_1",
-    "S1/sistemas_operacionais/ARQUITETURA DE SISTEMAS OPERACIONAIS -MACHADO.md",
     "Sem título 2.canvas",
     "Sem título 1.canvas",
-    "Sem título.canvas",
     "Sem título 3.canvas",
     "S1/sistemas_operacionais/notas/CAP 3 - Concorrência.md",
     "S1/sistemas_operacionais/resources/sub-rotinas.md",
@@ -175,12 +193,9 @@
     "S1/sistemas_operacionais/resources/Arquitetura_de_Sistemas_Operacionais_Fra.pdf",
     "S1/sistemas_operacionais/resources/Arquitetura_de_Sistemas_Operacionais_edit.pdf",
     "S1/sistemas_operacionais/resources/lista_1_s.o_Davi_Suelen.docx",
-    "S1/sistemas_operacionais/resources",
-    "S1/sistemas_operacionais/Nova pasta",
     "S1/sistemas_operacionais/notas/CAP 4 - Estrutura do sistema operacional.md",
     "S1/sistemas_operacionais/notas/EXERCÍCIOS.md",
     "S1/sistemas_operacionais/notas/SISTEMAS OPERACIONAIS.md",
-    "CIÊNCIAS DA COMPUTAÇÃO.md",
     "README.md",
     "S1/sistemas_operacionais/notas/CAP 1 - Visão Geral.md",
     "S1/sistemas_operacionais/notas/CAP 1 - VISÃO GERAL.md",
