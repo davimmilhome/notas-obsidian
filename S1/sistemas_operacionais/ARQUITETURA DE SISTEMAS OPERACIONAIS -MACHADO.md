@@ -2,6 +2,8 @@
 [[CAP 2 - Conceitos de Hardware e Software]]
 [[CAP 3 - Concorrência]]
 [[CAP 4 - Estrutura do sistema operacional]]
+[[CAP 5 - Processo]]
 [[CAP 7 - Sincronização e Comunicação entre processos]]
+[[CAP 8 - GERÊNCIA DO PROCESSADOR]]
 [[CAP 9 - Gerência de memória]]
 [[CAP 10 - Gerência de memória virtual]]

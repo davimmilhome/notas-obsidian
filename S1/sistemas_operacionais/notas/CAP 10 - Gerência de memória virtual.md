@@ -222,7 +222,21 @@ Sempre que a TLB fica com todas as suas entradas cheias, para que uma nova entra
 
 ### Proteção de memória
 
+Como existe o compartilhamento da memória principal, o S.O deve impedir que um processo tenha acesso ou modifique uma página do sistema sem autorização.
 
+Um primeiro nível de proteção é inerente ao próprio mecanismo de memória virtual por paginação. Nesse esquema, cada processo tem sua própria tabela de mapeamento e a tradução dos endereços é realizada pelo sistema. A ptroteção de acesso é realizada individualmente em cada página da memória principal, utilizando-se as entradas da tabela de mapeamento, onde alguns bits especifícam os acessos permitidos.
+
+Os tipos básicos de acesso são leitura e gravação. 
+
+![[Pasted image 20230531155557.png]]
+
+
+## Compartilhamento de memória
+
+Em sistemas que implementam memória virtual, é bastante simples a implementação da reentrância, possibilitando o compartilhamento de código entre os diversos processos. Para isso, basta que as entradas das tabelas de mapeamento dos processos apontem para os mesmos frames na memória principal, evitando, assim, várias cópias de um mesmo programa na memória.
+
+## Memória virtual por segmentação
+....
 
 
 
