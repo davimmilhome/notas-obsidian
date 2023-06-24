@@ -10,5 +10,6 @@
   "attachmentFolderPath": "assets/imgs",
   "spellcheckLanguages": [
     "pt-BR"
-  ]
+  ],
+  "promptDelete": false
 }

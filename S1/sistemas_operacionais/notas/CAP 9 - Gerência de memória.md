@@ -1,5 +1,5 @@
 
-A gerência de memória é uma tarefa complexa e tem como objeto maximizar o número de usuários e aplicações utilizando eficientemente o espaço da memória principal.
+A gerência de memória é uma tarefa complexa e tem como objeto maximizar o número de usuários e aplicações, utilizando eficientemente o espaço da memória principal.
 
 O processador somente executa instruções localizadas na memória principal, portanto o sistema operacional deve sempre transferir programas da memória secundária para a memória principal antes de serem executados. Além disso, o tempo de acesso à memória secundária é muito superior ao da memória principal, sendo assim, o sistema operacional deve buscar reduzir o número de operações de E/S na memória secundária.
 
@@ -35,7 +35,7 @@ Nessa implementação, a memória era dividida em tamanhos fixos, chamados de pa
 
 ![[Pasted image 20230529222932.png]]
 
-Inicialmente, os programas somente podiam ser carregados e executados e uma partição, mesmo se outras estivessem livres. Essa limitação se devia aos compiladores e montadores, que geravam apenas códigos absolutos. No código absoluto, todas as referências a endereços no programa são posições físicas na memória principal, ou seja, o programa só poderia ser carregado a partir do endereço de memória especificado em seu próprio código. Esse tipo de gerência de memória chamou-se de *Alocação Particionada Estática Absoluta.*
+Inicialmente, os programas somente podiam ser carregados e executados em uma partição, mesmo se outras estivessem livres. Essa limitação se devia aos compiladores e montadores, que geravam apenas códigos absolutos. No código absoluto, todas as referências a endereços no programa são posições físicas na memória principal, ou seja, o programa só poderia ser carregado a partir do endereço de memória especificado em seu próprio código. Esse tipo de gerência de memória chamou-se de *Alocação Particionada Estática Absoluta.*
 
 Com a evolução dos compiladores, montadores, linkers e outros, *o código passou a ser relocável*. Ou seja, todas as referências a memória no programa são relativas ao início do código e não mais a endereços físicos. Dessa forma, os programas poderiam ser executados  partir de qualquer partição.
 
@@ -51,7 +51,7 @@ Na Alocação Particionada Estática, o problema de fragmentação de memória i
 
 Dessa forma, na Alocação Particionada Dinâmica, foi eliminado o conceito de partições de tamanho fixo. Nesse esquema, cada programa utilizaria o espaço necessário, tornando esse espaço a sua partição. Então, não há fragmentação interna.
 
-Entretanto, um tipo diferente de fragmentação começa a ocorrer nesse caso, quando os programas forem terminando e deixando espaços cada vez menores na memória, não permitindo o ingresso de novos programas.
+Entretanto, um tipo diferente de fragmentação começa a ocorrer nesse caso (fragmentação externa), quando os programas forem terminando e deixando espaços cada vez menores na memória, não permitindo o ingresso de novos programas.
 
 ![[Pasted image 20230529224153.png]]
 
@@ -65,12 +65,14 @@ A segunda solução envolve a relocação de todas as partições ocupadas, cria
 
  * Best-fit
 
-Nessa estratégia a partição escolhida para alocar um programa é aquela em que sobra a menor área livre. Nesse algoritmo, a lista de áreas livras está ordenada por tamanho, diminuindo o tempo de busca por uma área desocupada. A desvantagem desse método é que o algoritmo tende a deixar cada vez mais a memória com pequenas áreas não-contíguas, aumentando  a fragmentação.
+Nessa estratégia a partição escolhida para alocar um programa é aquela em que sobra a menor área livre. Nesse algoritmo, a lista de áreas livres está ordenada por tamanho, diminuindo o tempo de busca por uma área desocupada. A desvantagem desse método é que o algoritmo tende a deixar cada vez mais a memória com pequenas áreas não-contíguas, aumentando  a fragmentação.
 
- * Worst-fi
-O contra´rio da estratégia best-fit, a worst-fit busca deixar o maior espaço possível disponível pós alocação. Essa ténica deixa espaços livres maiores que permitem um maior número de programas utilizando a memória e diminuindo a fragmentação.
+ * Worst-fit
+
+Ao contrario da estratégia best-fit, a worst-fit busca deixar o maior espaço possível disponível pós alocação. Essa técnica deixa espaços livres maiores que permitem um maior número de programas utilizando a memória e diminuindo a fragmentação.
 
 * First-fit
+
 A estratégia first-fit tem como vantagem sua rapidez, no caso, o sistema procura a primeira partição livre capaz de abrigar o programa. Essa é a estratégia mais rápida e que consome menos recursos do sistema.
 
 # Swapping

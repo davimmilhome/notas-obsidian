@@ -4,6 +4,6 @@
 [[CAP 4 - Estrutura do sistema operacional]]
 [[CAP 5 - Processo]]
 [[CAP 7 - Sincronização e Comunicação entre processos]]
-[[CAP 8 - GERÊNCIA DO PROCESSADOR]]
+[[CAP 8 - Gerência do processador]]
 [[CAP 9 - Gerência de memória]]
 [[CAP 10 - Gerência de memória virtual]]

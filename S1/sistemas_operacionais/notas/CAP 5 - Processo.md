@@ -1,11 +1,11 @@
 # Introdução
 
-O conceito de processo é a base para a implementação de sistemas multiprogramáveis. Então, se tornou cargo do sistema operacional se responsabilizar por alocar recursos, compartilhar dados, trocar informações e sincronizar a execução entre processos.
+O conceito de processo é a base para a implementação de sistemas mutiprogramáveis. Então, se tornou cargo do sistema operacional se responsabilizar por alocar recursos, compartilhar dados, trocar informações e sincronizar a execução entre processos.
 
 
 Nota: Nos sistemas com múltiplos processadores, além de existir a concorrência entre processos pelo processador, também existe a possibilidade de execução simultânea de diferentes processos nos processadores distintos.
 
-Como apresentado anteriormente, o processador busca a próxima instrução a ser executada na memória e a armazena no registrador PC (program counter). Do ponto de vista do hardware apenas são executadas instruções, sem distinguir qual programa encontra-se em processamento. Então, é de responsabilidade do S.O implementar a concorrÊncia entre programas gerenciando a alternância da execução de instruções.
+Como apresentado anteriormente, o processador busca a próxima instrução a ser executada na memória e a armazena no registrador PC (program counter). Do ponto de vista do hardware apenas são executadas instruções, sem distinguir qual programa encontra-se em processamento. Então, é de responsabilidade do S.O implementar a concorrência entre programas gerenciando a alternância da execução de instruções.
 
 
 # Estrutura do processo
@@ -50,6 +50,7 @@ As quotas são o limite de cada recurso do sistema que um processo pode alocar. 
 - N° máximo de operações de E/S pendentes
 - Tamanho max do buffer para operações de E/S
 - N° máximo de processos, suprocessos e threads que podem ser criados
+---
 
 * Privilégios
 
