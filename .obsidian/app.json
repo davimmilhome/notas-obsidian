@@ -8,8 +8,6 @@
   },
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "assets/imgs",
-  "spellcheckLanguages": [
-    "pt-BR"
-  ],
+  "spellcheckLanguages": null,
   "promptDelete": false
 }

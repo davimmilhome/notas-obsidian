@@ -1,2 +1,4 @@
 [[INTRODUÇÃO]]
 [[VARIÁVEIS]]
+[[ARRAYS]]
+[[LAÇOS DE REPETIÇÃO]]
